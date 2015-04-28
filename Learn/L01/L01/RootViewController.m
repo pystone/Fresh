@@ -6,12 +6,16 @@
 //  Copyright (c) 2015 steven. All rights reserved.
 //
 
+// Main scene
 #import "RootViewController.h"
 #import "MyFridgeViewController.h"
 #import "MealViewController.h"
 #import "CartViewController.h"
 #import "MoreViewController.h"
-// 宏定义高度 尺寸 49对应ip6的测试图片
+
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 #define kScreenWidth     [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight     [UIScreen mainScreen].bounds.size.height
 
@@ -26,10 +30,16 @@ CGFloat const btnHeight=50;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    [self.view addSubview:loginButton];
     // Do any additional setup after loading the view.
-    self.tabBar.hidden = YES;// hide default
-    [self initViewController];
-    [self initTabBarView];
+//    if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
+        self.tabBar.hidden = YES;// hide default
+        [self initViewController];
+        [self initTabBarView];
+//    }
+
 }
 
 // initialize viewcontroller of 4 view in the tab
@@ -116,6 +126,8 @@ CGFloat const btnHeight=50;
     } completion:nil];
 }
 
+
+
 /*
 #pragma mark - Navigation
 
@@ -125,5 +137,8 @@ CGFloat const btnHeight=50;
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 
 @end

@@ -13,8 +13,24 @@
 @end
 
 @implementation AppDelegate
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-
+//- (void)applicationDidBecomeActive:(UIApplication *)application {
+//    [FBSDKAppEvents activateApp];
+//}
+//
+////- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+////    return [[FBSDKApplicationDelegate sharedInstance] application:application
+////                                    didFinishLaunchingWithOptions:launchOptions];
+////}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    return [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                          openURL:url
+//                                                sourceApplication:sourceApplication
+//                                                       annotation:annotation];
+//}
+//
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     

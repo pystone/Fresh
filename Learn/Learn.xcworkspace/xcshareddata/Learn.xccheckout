@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>263F274E-78A7-4ABA-9EA9-0DE3DC4838B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Learn</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB11E28C1452C035EDA1588998C2239478AD00C4</key>
+		<string>github.com:pystone/Fresh.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Learn/Learn.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB11E28C1452C035EDA1588998C2239478AD00C4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:pystone/Fresh.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB11E28C1452C035EDA1588998C2239478AD00C4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB11E28C1452C035EDA1588998C2239478AD00C4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Fresh</string>
+		</dict>
+	</array>
+</dict>
+</plist>

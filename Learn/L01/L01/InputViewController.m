@@ -18,11 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    pushButton.frame = CGRectMake(60, 60, 100, 40);
-    [pushButton setTitle:@"Dismiss" forState:UIControlStateNormal];// cannot use "set image"
+//    pushButton.center = CGPoint
+    pushButton.frame = CGRectMake(10, 60, 150, 40);
+    [pushButton setTitle:@"Back" forState:UIControlStateNormal];// cannot use "set image"
                                                                   //when used "set title"
     [pushButton addTarget:self action:@selector(dismissAction)
          forControlEvents:UIControlEventTouchUpInside];
