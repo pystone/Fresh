@@ -37,16 +37,18 @@ UILabel *descLabel;
     }
     return _imageDicts;
 }
+
 - (void)_leftBtnOnClick{
-    self.index --;
-    
-    [self btnClickChange];
-    
+    if (self.index > 0) {
+        self.index --;
+        [self btnClickChange];
+    }
 }
 - (void)_rightBtnOnClick{
-    self.index ++;
-    
-    [self btnClickChange];
+    if (self.index < 4) {
+        self.index ++;
+        [self btnClickChange];
+    }    
 }
 
 
@@ -63,31 +65,6 @@ UILabel *descLabel;
     imageView.image = [UIImage imageNamed:@"1.jpg"];
     imageView.center = self.view.center;
     [self.view addSubview:imageView];
-    
-    
-//    UILabel *descLabel;
-    
-    
-//    UIFont * customFont = [UIFont fontWithName:@"ArialMIT" size:12]; //custom font
-//    NSString * text = @"1/5";
-//    
-//    CGSize labelSize = [text sizeWithFont:customFont constrainedToSize:CGSizeMake(380, 20) lineBreakMode:NSLineBreakByTruncatingTail];
-//    
-//    topLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 15, labelSize.width, labelSize.height)];
-//    topLabel.text = text;
-////    topLabel.font = customFont;
-//    topLabel.numberOfLines = 1;
-//    topLabel.baselineAdjustment = UIBaselineAdjustmentAlignBaselines; // or UIBaselineAdjustmentAlignCenters, or UIBaselineAdjustmentNone
-//    topLabel.adjustsFontSizeToFitWidth = YES;
-//    topLabel.adjustsLetterSpacingToFitWidth = YES;
-//    topLabel.minimumScaleFactor = 10.0f/12.0f;
-//    topLabel.clipsToBounds = YES;
-//    topLabel.backgroundColor = [UIColor clearColor];
-//    topLabel.textColor = [UIColor blackColor];
-//    topLabel.textAlignment = NSTextAlignmentLeft;
-//    [self.view addSubview:topLabel];
-    
-    
     
     UIButton *_leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     _leftBtn.frame = CGRectMake(0, 390, 60, 40);
@@ -115,11 +92,9 @@ UILabel *descLabel;
     [_rightBtn addTarget:self action:@selector(_rightBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_rightBtn];
     
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 80, 320, 50)];
-    topLabel.text = @"WELCOME";
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 50)];
+    topLabel.text = @"1/5";
     topLabel.textColor = [UIColor orangeColor];
-//    topLabel.textAlignment = UITextAlignmentCenter;
-    
     topLabel.backgroundColor = [UIColor whiteColor];
     topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
     topLabel.hidden = NO;
@@ -127,34 +102,35 @@ UILabel *descLabel;
     topLabel.highlightedTextColor = [UIColor blueColor];
     topLabel.lineBreakMode = YES;
     topLabel.numberOfLines = 0;
+    topLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:topLabel];
     
-    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 420, 220, 50)];
-    descLabel.text = @"WELCOME low";
+    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 420, 320, 50)];
+    descLabel.text = @"Mapo Tofu";
     descLabel.textColor = [UIColor orangeColor];
-    //    topLabel.textAlignment = UITextAlignmentCenter;
-    
     descLabel.backgroundColor = [UIColor clearColor];
     descLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
     descLabel.hidden = NO;
     descLabel.highlighted = YES;
     descLabel.highlightedTextColor = [UIColor blueColor];
     descLabel.lineBreakMode = YES;
-//    descLabel.numberOfLines = 0;
+    descLabel.textAlignment = NSTextAlignmentCenter;
+    descLabel.numberOfLines = 0;
     [self.view addSubview:descLabel];
 }
 
 - (void)btnClickChange
 {
-    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), self.imageDicts.count];
+    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), (int)self.imageDicts.count];
     
     
     descLabel.text = self.imageDicts[self.index][@"description"];
+    NSString *nameofjpg = [NSString stringWithFormat:@"%d.jpg", self.index +1];
     
-    imageView.image = [UIImage imageNamed:self.imageDicts[self.index][@"name"]];
+    imageView.image = [UIImage imageNamed:nameofjpg];
     //
-    _leftBtn.enabled = (self.index != 0);
-    _rightBtn.enabled = (self.index != 4);
+    _leftBtn.enabled = (self.index < 1);
+    _rightBtn.enabled = (self.index > 4);
 }
 
 - (void)didReceiveMemoryWarning {

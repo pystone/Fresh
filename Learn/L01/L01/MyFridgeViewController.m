@@ -37,6 +37,7 @@ CGFloat const writebtnHeight=32;
 //    
 //    return self;
 //}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -143,7 +144,7 @@ CGFloat const writebtnHeight=32;
 }
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ Controller Cell %ld", self.title, (long)indexPath.row]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@'s Food %ld", self.title, (long)indexPath.row]];
 }
 
 

@@ -12,6 +12,7 @@
 #import "MealViewController.h"
 #import "CartViewController.h"
 #import "MoreViewController.h"
+#import "firstViewController.h"
 
 //#import <FBSDKCoreKit/FBSDKCoreKit.h>
 //#import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -36,9 +37,11 @@ CGFloat const btnHeight=50;
 //    if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
         self.tabBar.hidden = YES;// hide default
+    [self popup];
         [self initViewController];
         [self initTabBarView];
 //    }
+    NSLog(@"22");
 
 }
 
@@ -48,6 +51,10 @@ CGFloat const btnHeight=50;
     MealViewController *mealVC = [[MealViewController alloc] init];
     CartViewController *cartVC = [[CartViewController alloc] init];
     MoreViewController *moreVC = [[MoreViewController alloc] init];
+    
+//    firstViewController *first = [[firstViewController alloc] init];
+    //此处应是pop
+//    [self popup];
     
     // use array to store the VC in the tab
     NSArray *vcArray = @[myfridgeVC,mealVC,cartVC,moreVC];
@@ -60,6 +67,12 @@ CGFloat const btnHeight=50;
     }
     // assign naviC to tabC
     self.viewControllers = tabArray;
+}
+
+-(void)popup{
+    firstViewController *first = [[firstViewController alloc] init];
+
+    [self presentViewController:first animated:YES completion:nil];
 }
 
 
