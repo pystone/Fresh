@@ -59,7 +59,7 @@ CGFloat const writebtnHeight=32;
     UIButton *writebtn = [UIButton buttonWithType:UIButtonTypeCustom];// init based on type
     writebtn.frame = CGRectMake(0, 0, writebtnWidth, writebtnHeight);// set size
     [writebtn setBackgroundImage:[UIImage imageNamed:@"write"] forState:UIControlStateNormal];// set BG
-    [writebtn addTarget:self action:@selector(presentAction) forControlEvents:UIControlEventTouchUpInside];// set action
+    [writebtn addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];// set action
     // add buttom in the navigation bar
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:writebtn];
     self.navigationItem.rightBarButtonItem = item;

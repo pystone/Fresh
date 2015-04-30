@@ -51,7 +51,19 @@ UILabel *descLabel;
     }    
 }
 
-
+-(void)BtnOnClick{
+    if (self.index < 4 || self.index >0) {
+        self.index ++;
+        [self btnClickChange];
+    }
+    if (self.index == 4) {
+        self.index = 0;
+        [self btnClickChange];
+    }else if (self.index == 0){
+        self.index = 4;
+        [self btnClickChange];
+    }
+}
 
 
 - (void)viewDidLoad {
@@ -76,7 +88,7 @@ UILabel *descLabel;
     [_leftBtn setImage:btnImage2 forState:UIControlStateHighlighted];
     UIImage *btnImage3 = [UIImage imageNamed:@"left_disabled.png"];
     [_leftBtn setImage:btnImage3 forState:UIControlStateDisabled];
-    [_leftBtn addTarget:self action:@selector(_leftBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+    [_leftBtn addTarget:self action:@selector(BtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_leftBtn];
     
     UIButton *_rightBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -89,7 +101,7 @@ UILabel *descLabel;
     [_rightBtn setImage:btnImage5 forState:UIControlStateHighlighted];
     UIImage *btnImage6 = [UIImage imageNamed:@"right_disabled.png"];
     [_rightBtn setImage:btnImage6 forState:UIControlStateDisabled];
-    [_rightBtn addTarget:self action:@selector(_rightBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+    [_rightBtn addTarget:self action:@selector(BtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_rightBtn];
     
     topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 50)];
@@ -103,13 +115,13 @@ UILabel *descLabel;
     topLabel.lineBreakMode = YES;
     topLabel.numberOfLines = 0;
     topLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:topLabel];
+//    [self.view addSubview:topLabel];
     
-    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 420, 320, 50)];
+    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 320, 70)];
     descLabel.text = @"Mapo Tofu";
     descLabel.textColor = [UIColor orangeColor];
     descLabel.backgroundColor = [UIColor clearColor];
-    descLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    descLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:20.0];
     descLabel.hidden = NO;
     descLabel.highlighted = YES;
     descLabel.highlightedTextColor = [UIColor blueColor];

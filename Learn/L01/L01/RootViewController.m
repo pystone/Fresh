@@ -36,13 +36,11 @@ CGFloat const btnHeight=50;
     // Do any additional setup after loading the view.
 //    if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
-        self.tabBar.hidden = YES;// hide default
-    [self popup];
+    self.tabBar.hidden = YES;// hide default
+
+//    [self popup];
         [self initViewController];
         [self initTabBarView];
-//    }
-    NSLog(@"22");
-
 }
 
 // initialize viewcontroller of 4 view in the tab
@@ -57,7 +55,7 @@ CGFloat const btnHeight=50;
 //    [self popup];
     
     // use array to store the VC in the tab
-    NSArray *vcArray = @[myfridgeVC,mealVC,cartVC,moreVC];
+    NSArray *vcArray = @[mealVC,myfridgeVC,cartVC,moreVC];
     NSMutableArray *tabArray = [NSMutableArray arrayWithCapacity:vcArray.count];// == arraylist
     
     //init navigationC
@@ -85,9 +83,9 @@ CGFloat const btnHeight=50;
     [self.view addSubview:_tabBarView];
     
     //create array to load icons
-    NSArray *imgArray = @[@"home_tab_icon_fridge",@"home_tab_icon_meal",
+    NSArray *imgArray = @[@"home_tab_icon_meal",@"home_tab_icon_fridge",
                           @"home_tab_icon_cart",@"home_tab_icon_home"];
-    NSArray *titleArray = @[@"My Fridge",@"Meal",@"Cart",@"More"];
+    NSArray *titleArray = @[@"Meal",@"My Fridge",@"Cart",@"More"];
     for (int i = 0; i < imgArray.count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setBackgroundImage:[UIImage imageNamed:imgArray[i]]

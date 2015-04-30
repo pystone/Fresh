@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02805B81AF1B74D006DECB1 /* RemindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02805B71AF1B74D006DECB1 /* RemindViewController.m */; };
+		B02805BB1AF1C177006DECB1 /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02805BA1AF1C177006DECB1 /* PolicyViewController.m */; };
 		B06E737A1AECA14F001954E5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06E73761AECA14F001954E5 /* Bolts.framework */; };
 		B06E737B1AECA14F001954E5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06E73771AECA14F001954E5 /* FBSDKCoreKit.framework */; };
 		B06E737C1AECA14F001954E5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06E73781AECA14F001954E5 /* FBSDKLoginKit.framework */; };
@@ -25,6 +27,9 @@
 		B07897A31AECD35D00002EC4 /* right_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B07897A21AECD35D00002EC4 /* right_normal.png */; };
 		B07897A51AECD44E00002EC4 /* imageDate.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07897A41AECD44E00002EC4 /* imageDate.plist */; };
 		B0CD00681AEF518600A9DF02 /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CD00671AEF518600A9DF02 /* firstViewController.m */; };
+		B0CD00711AF1A75200A9DF02 /* no.png in Resources */ = {isa = PBXBuildFile; fileRef = B0CD00701AF1A75200A9DF02 /* no.png */; };
+		B0CD00731AF1A75B00A9DF02 /* yes.png in Resources */ = {isa = PBXBuildFile; fileRef = B0CD00721AF1A75B00A9DF02 /* yes.png */; };
+		B0CD00761AF1AE0C00A9DF02 /* WhatUHaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CD00751AF1AE0C00A9DF02 /* WhatUHaveViewController.m */; };
 		B0D09EB11AD30389006D028B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09EB01AD30389006D028B /* main.m */; };
 		B0D09EB41AD30389006D028B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09EB31AD30389006D028B /* AppDelegate.m */; };
 		B0D09EB71AD30389006D028B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09EB61AD30389006D028B /* ViewController.m */; };
@@ -52,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B02805B61AF1B74D006DECB1 /* RemindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindViewController.h; sourceTree = "<group>"; };
+		B02805B71AF1B74D006DECB1 /* RemindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindViewController.m; sourceTree = "<group>"; };
+		B02805B91AF1C177006DECB1 /* PolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyViewController.h; sourceTree = "<group>"; };
+		B02805BA1AF1C177006DECB1 /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyViewController.m; sourceTree = "<group>"; };
 		B06E73761AECA14F001954E5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		B06E73771AECA14F001954E5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B06E73781AECA14F001954E5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -72,6 +81,10 @@
 		B07897A41AECD44E00002EC4 /* imageDate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = imageDate.plist; path = "../../../../../../Downloads/003-图片浏览器/003-图片浏览器/imageDate.plist"; sourceTree = "<group>"; };
 		B0CD00661AEF518600A9DF02 /* firstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
 		B0CD00671AEF518600A9DF02 /* firstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
+		B0CD00701AF1A75200A9DF02 /* no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no.png; path = "../../../../cmu/08766 Pervasive/fresh project/material/no.png"; sourceTree = "<group>"; };
+		B0CD00721AF1A75B00A9DF02 /* yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes.png; path = "../../../../cmu/08766 Pervasive/fresh project/material/yes.png"; sourceTree = "<group>"; };
+		B0CD00741AF1AE0C00A9DF02 /* WhatUHaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatUHaveViewController.h; sourceTree = "<group>"; };
+		B0CD00751AF1AE0C00A9DF02 /* WhatUHaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatUHaveViewController.m; sourceTree = "<group>"; };
 		B0D09EAB1AD30389006D028B /* L01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D09EAF1AD30389006D028B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D09EB01AD30389006D028B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +164,8 @@
 		B0D09EA21AD30389006D028B = {
 			isa = PBXGroup;
 			children = (
+				B0CD00721AF1A75B00A9DF02 /* yes.png */,
+				B0CD00701AF1A75200A9DF02 /* no.png */,
 				B07897971AECD32800002EC4 /* arrow */,
 				B078978D1AECD2A800002EC4 /* 1.jpg */,
 				B078978E1AECD2A800002EC4 /* 2.jpg */,
@@ -202,6 +217,12 @@
 				B0D09EE71AD34A8D006D028B /* PushViewController.m */,
 				B0CD00661AEF518600A9DF02 /* firstViewController.h */,
 				B0CD00671AEF518600A9DF02 /* firstViewController.m */,
+				B0CD00741AF1AE0C00A9DF02 /* WhatUHaveViewController.h */,
+				B0CD00751AF1AE0C00A9DF02 /* WhatUHaveViewController.m */,
+				B02805B61AF1B74D006DECB1 /* RemindViewController.h */,
+				B02805B71AF1B74D006DECB1 /* RemindViewController.m */,
+				B02805B91AF1C177006DECB1 /* PolicyViewController.h */,
+				B02805BA1AF1C177006DECB1 /* PolicyViewController.m */,
 			);
 			path = L01;
 			sourceTree = "<group>";
@@ -319,6 +340,7 @@
 				B07897A31AECD35D00002EC4 /* right_normal.png in Resources */,
 				B07897A51AECD44E00002EC4 /* imageDate.plist in Resources */,
 				B07897951AECD2A800002EC4 /* 4.jpg in Resources */,
+				B0CD00711AF1A75200A9DF02 /* no.png in Resources */,
 				B07897921AECD2A800002EC4 /* 1.jpg in Resources */,
 				B078979F1AECD34F00002EC4 /* right_disable.png in Resources */,
 				B07897931AECD2A800002EC4 /* 2.jpg in Resources */,
@@ -328,6 +350,7 @@
 				B078979D1AECD34700002EC4 /* left_normal.png in Resources */,
 				B078979B1AECD34000002EC4 /* left_highlighted.png in Resources */,
 				B0D09EBC1AD30389006D028B /* Images.xcassets in Resources */,
+				B0CD00731AF1A75B00A9DF02 /* yes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +370,13 @@
 			files = (
 				B0D09ED91AD30EB3006D028B /* MyFridgeViewController.m in Sources */,
 				B0D09EE21AD30EF9006D028B /* MoreViewController.m in Sources */,
+				B0CD00761AF1AE0C00A9DF02 /* WhatUHaveViewController.m in Sources */,
+				B02805B81AF1B74D006DECB1 /* RemindViewController.m in Sources */,
 				B06E73801AECA948001954E5 /* DetailsViewController.m in Sources */,
 				B0D09EB71AD30389006D028B /* ViewController.m in Sources */,
 				B0D09EB41AD30389006D028B /* AppDelegate.m in Sources */,
 				B0D09ED61AD30497006D028B /* RootViewController.m in Sources */,
+				B02805BB1AF1C177006DECB1 /* PolicyViewController.m in Sources */,
 				B0D09EB11AD30389006D028B /* main.m in Sources */,
 				B0CD00681AEF518600A9DF02 /* firstViewController.m in Sources */,
 				B0D09EE81AD34A8D006D028B /* PushViewController.m in Sources */,
@@ -477,7 +503,7 @@
 		B0D09ECF1AD30389006D028B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,7 +518,7 @@
 		B0D09ED01AD30389006D028B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
