@@ -7,6 +7,7 @@
 //
 
 #import "MealViewController.h"
+//#import "My"
 
 @interface MealViewController ()
 //@property (weak, nonatomic) IBOutlet UILabel *topLabel;
@@ -79,45 +80,63 @@ UILabel *descLabel;
     [self.view addSubview:imageView];
     
     UIButton *_leftBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _leftBtn.frame = CGRectMake(0, 390, 60, 40);
+//    _leftBtn.frame = CGRectMake(0, 390, 60, 40);
+    _leftBtn.frame = CGRectMake(100, 440, 60, 40);
+
     _leftBtn.userInteractionEnabled = YES;
+    UIImage *btnImage1 = [UIImage imageNamed:@"yes.png"];
+    [_leftBtn setBackgroundImage:btnImage1 forState:UIControlStateNormal];
     
-    UIImage *btnImage1 = [UIImage imageNamed:@"left_normal.png"];
-    [_leftBtn setImage:btnImage1 forState:UIControlStateNormal];
-    UIImage *btnImage2 = [UIImage imageNamed:@"left_highlighted.png"];
-    [_leftBtn setImage:btnImage2 forState:UIControlStateHighlighted];
-    UIImage *btnImage3 = [UIImage imageNamed:@"left_disabled.png"];
-    [_leftBtn setImage:btnImage3 forState:UIControlStateDisabled];
+//    UIImage *btnImage1 = [UIImage imageNamed:@"left_normal.png"];
+//    [_leftBtn setImage:btnImage1 forState:UIControlStateNormal];
+//    UIImage *btnImage2 = [UIImage imageNamed:@"left_highlighted.png"];
+//    [_leftBtn setImage:btnImage2 forState:UIControlStateHighlighted];
+//    UIImage *btnImage3 = [UIImage imageNamed:@"left_disabled.png"];
+//    [_leftBtn setImage:btnImage3 forState:UIControlStateDisabled];
     [_leftBtn addTarget:self action:@selector(BtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_leftBtn];
     
     UIButton *_rightBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _rightBtn.frame = CGRectMake(260, 390, 60, 40);
+//    _rightBtn.frame = CGRectMake(260, 390, 60, 40);
+    _rightBtn.frame = CGRectMake(160, 440, 60, 40);
     _rightBtn.userInteractionEnabled = YES;
-    
-    UIImage *btnImage4 = [UIImage imageNamed:@"right_normal.png"];
-    [_rightBtn setImage:btnImage4 forState:UIControlStateNormal];
-    UIImage *btnImage5 = [UIImage imageNamed:@"right_highlighted.png"];
-    [_rightBtn setImage:btnImage5 forState:UIControlStateHighlighted];
-    UIImage *btnImage6 = [UIImage imageNamed:@"right_disabled.png"];
-    [_rightBtn setImage:btnImage6 forState:UIControlStateDisabled];
+    UIImage *btnImage4 = [UIImage imageNamed:@"no.png"];
+    [_rightBtn setBackgroundImage:btnImage4 forState:UIControlStateNormal];
+
+//    UIImage *btnImage4 = [UIImage imageNamed:@"right_normal.png"];
+//    [_rightBtn setImage:btnImage4 forState:UIControlStateNormal];
+//    UIImage *btnImage5 = [UIImage imageNamed:@"right_highlighted.png"];
+//    [_rightBtn setImage:btnImage5 forState:UIControlStateHighlighted];
+//    UIImage *btnImage6 = [UIImage imageNamed:@"right_disabled.png"];
+//    [_rightBtn setImage:btnImage6 forState:UIControlStateDisabled];
     [_rightBtn addTarget:self action:@selector(BtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_rightBtn];
     
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 50)];
-    topLabel.text = @"1/5";
-    topLabel.textColor = [UIColor orangeColor];
+    
+    UIButton *choice = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    //    _leftBtn.frame = CGRectMake(0, 390, 60, 40);
+    choice.frame = CGRectMake(240, 440, 60, 40);
+    
+    choice.userInteractionEnabled = YES;
+//    UIImage *btnImage9 = [UIImage imageNamed:@"yes.png"];
+    [choice setTitle:@"Chosen" forState:UIControlStateNormal];
+    [_leftBtn addTarget:self action:@selector(choiceBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:choice];
+    
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 320, 50)];
+    topLabel.text = @"What Would You Like To Eat Today";
+    topLabel.textColor = [UIColor redColor];
     topLabel.backgroundColor = [UIColor whiteColor];
-    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    topLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:18.0];
     topLabel.hidden = NO;
     topLabel.highlighted = YES;
     topLabel.highlightedTextColor = [UIColor blueColor];
     topLabel.lineBreakMode = YES;
     topLabel.numberOfLines = 0;
     topLabel.textAlignment = NSTextAlignmentCenter;
-//    [self.view addSubview:topLabel];
+    [self.view addSubview:topLabel];
     
-    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 320, 70)];
+    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 130, 320, 70)];
     descLabel.text = @"Mapo Tofu";
     descLabel.textColor = [UIColor orangeColor];
     descLabel.backgroundColor = [UIColor clearColor];
@@ -133,7 +152,7 @@ UILabel *descLabel;
 
 - (void)btnClickChange
 {
-    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), (int)self.imageDicts.count];
+//    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), (int)self.imageDicts.count];
     
     
     descLabel.text = self.imageDicts[self.index][@"description"];
@@ -143,6 +162,10 @@ UILabel *descLabel;
     //
     _leftBtn.enabled = (self.index < 1);
     _rightBtn.enabled = (self.index > 4);
+}
+
+-(void)choiceBtnOnClick{
+    
 }
 
 - (void)didReceiveMemoryWarning {

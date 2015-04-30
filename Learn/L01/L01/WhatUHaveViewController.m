@@ -23,8 +23,13 @@ UILabel *topLabel;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 90, 320, 300)];
+    imageView.image = [UIImage imageNamed:@"shot.png"];
+//    imageView.center = self.view.center;
+    [self.view addSubview:imageView];
+    
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    backBtn.frame = CGRectMake(0, 280, 320, 40);
+    backBtn.frame = CGRectMake(0, 400, 320, 40);
     backBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [backBtn setTitle:@"DONE!" forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
@@ -32,18 +37,18 @@ UILabel *topLabel;
     [self.view addSubview:backBtn];
     
     laterBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    laterBtn.frame = CGRectMake(0, 420, 320, 40);
+    laterBtn.frame = CGRectMake(0, 450, 320, 40);
     laterBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [laterBtn setTitle:@"Not at home" forState:UIControlStateNormal];
     [laterBtn addTarget:self action:@selector(laterAction) forControlEvents:UIControlEventTouchUpInside];
     //    [displaybtn setBackgroundImage:@" " forState:UIControlStateNormal];
     [self.view addSubview:laterBtn];
     
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, 320, 50)];
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, 320, 50)];
     topLabel.text = @"This page for changing the amount of food";
     topLabel.textColor = [UIColor orangeColor];
     topLabel.backgroundColor = [UIColor whiteColor];
-    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    topLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:18.0];
     topLabel.hidden = NO;
     topLabel.highlighted = YES;
     topLabel.highlightedTextColor = [UIColor blueColor];

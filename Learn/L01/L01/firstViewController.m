@@ -74,23 +74,23 @@ UIButton *doneBtn;
     [self.view addSubview:doneBtn];
     
     topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 50)];
-    topLabel.text = @"1/5";
+    topLabel.text = @"Tell Us What You Like";
     topLabel.textColor = [UIColor orangeColor];
     topLabel.backgroundColor = [UIColor whiteColor];
-    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    topLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:20.0];
     topLabel.hidden = NO;
     topLabel.highlighted = YES;
     topLabel.highlightedTextColor = [UIColor blueColor];
     topLabel.lineBreakMode = YES;
     topLabel.numberOfLines = 0;
     topLabel.textAlignment = NSTextAlignmentCenter;
-//    [self.view addSubview:topLabel];
+    [self.view addSubview:topLabel];
     
-    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 390, 320, 50)];
+    descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 375, 320, 50)];
     descLabel.text = @"Mapo Tofu";
     descLabel.textColor = [UIColor orangeColor];
     descLabel.backgroundColor = [UIColor clearColor];
-    descLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    descLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:20.0];
     descLabel.hidden = NO;
     descLabel.highlighted = YES;
     descLabel.highlightedTextColor = [UIColor blueColor];
@@ -102,7 +102,7 @@ UIButton *doneBtn;
 
 - (void)btnClickChange
 {
-    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), (int)self.imageDicts.count];
+//    topLabel.text = [NSString stringWithFormat:@"%d/%d", (self.index + 1), (int)self.imageDicts.count];
     
     
     descLabel.text = self.imageDicts[self.index][@"description"];

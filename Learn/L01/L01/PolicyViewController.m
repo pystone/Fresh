@@ -21,7 +21,7 @@
     topLabel.text = @"Policy";
     topLabel.textColor = [UIColor orangeColor];
     topLabel.backgroundColor = [UIColor whiteColor];
-    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:24.0];
     topLabel.hidden = NO;
     topLabel.highlighted = YES;
     topLabel.highlightedTextColor = [UIColor blueColor];
@@ -33,13 +33,23 @@
     
     UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     //    pushButton.center = CGPoint
-    pushButton.frame = CGRectMake(0, 30, 50, 40);
+    pushButton.frame = CGRectMake(20, 30, 50, 40);
     pushButton.titleLabel.textAlignment = NSTextAlignmentLeft;
-    [pushButton setTitle:@"Back" forState:UIControlStateNormal];// cannot use "set image"
+    [pushButton setTitle:@"Accept" forState:UIControlStateNormal];// cannot use "set image"
     //when used "set title"
     [pushButton addTarget:self action:@selector(dismissAction)
          forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pushButton];
+    
+    UIButton *noButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    //    pushButton.center = CGPoint
+    noButton.frame = CGRectMake(230, 30, 80, 40);
+    noButton.titleLabel.textAlignment = NSTextAlignmentLeft;
+    [noButton setTitle:@"Decline" forState:UIControlStateNormal];// cannot use "set image"
+    //when used "set title"
+    [noButton addTarget:self action:@selector(dismissAction)
+         forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:noButton];
     
     [self addTextView];
 }
@@ -49,9 +59,12 @@
 }
 
 -(void)addTextView{
+//    UITextField *myTextView = UITextFieldTextDidBeginEditingNotification
     UITextView *myTextView = [[UITextView alloc]initWithFrame:
                   CGRectMake(10, 80, 320, 400)];
     [myTextView setText:@"\
+     We upload any information only AFTER you accept this policy. If you decline this policy, please feel free to delete this app and all the collected data will be deleted.\n\
+     \n\
      This Privacy Policy governs the manner in which Fresh collects, uses, maintains and discloses information collected from users \(each, a \"User\") of the http://www.fresh-cmu-pervasive-project.com website (\"Site\").\n\
      \n\
      Personal identification information\n\
@@ -88,7 +101,7 @@ Changes to this privacy policy\n\
      Fresh has the discretion to update this privacy policy at any time. When we do, we will send you an email. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.\n\
      \n\
 Your acceptance of these terms\n\
-     By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. Privacy policy created by GeneratePrivacyPolicy.com\n\
+     By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes.\n\
     \n\
      Contacting us\n\
      If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us.\n\
@@ -98,7 +111,6 @@ Your acceptance of these terms\n\
      "];
      myTextView.delegate = self;
      [self.view addSubview:myTextView];
-     
      }
 
 #pragma mark - Text View delegates

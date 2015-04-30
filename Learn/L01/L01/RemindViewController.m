@@ -49,7 +49,7 @@ UILabel *descLabel;
     topLabel.text = @"Reming me to input the volume/weight of food in 3 hours";
     topLabel.textColor = [UIColor orangeColor];
     topLabel.backgroundColor = [UIColor whiteColor];
-    topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:14.0];
+    topLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:20.0];
     topLabel.hidden = NO;
     topLabel.highlighted = YES;
     topLabel.highlightedTextColor = [UIColor blueColor];

@@ -23,8 +23,31 @@
     self.title = @"More";
     self.view.backgroundColor = [UIColor whiteColor];
     [self initNavButton];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Privacy Policy"
+                                                    message:@"Please view our privacy policy."
+                                                   delegate:self
+                                          cancelButtonTitle:@"Decline"
+                                          otherButtonTitles:@"View", nil];
+    [alert show];
+//    [alert release];
+    
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        //Code for OK button
+        NSLog(@"0");
+    }
+    if (buttonIndex == 1)
+    {
+        //Code for download button
+        NSLog(@"1");
+        [self policyAction];
 
+    }
+}
 - (void)initNavButton{
     UIButton *displaybtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     displaybtn.frame = CGRectMake(0, 100, 320, 40);
